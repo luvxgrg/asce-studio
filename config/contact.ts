@@ -14,6 +14,11 @@ export const projectEnquiryBody = [
   "Brief:",
 ].join("\r\n");
 
+export const generatedGmailComposeUrl =
+  `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(contactEmail)}&su=${encodeURIComponent(projectEnquirySubject)}&body=${encodeURIComponent(projectEnquiryBody)}`;
+
 export const projectEnquiryLinkProps = {
-  href: `mailto:${contactEmail}?subject=${encodeURIComponent(projectEnquirySubject)}&body=${encodeURIComponent(projectEnquiryBody)}`,
+  href: generatedGmailComposeUrl,
+  target: "_blank",
+  rel: "noopener noreferrer",
 } as const;

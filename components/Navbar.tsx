@@ -190,7 +190,6 @@ export default function Navbar() {
 
             <a
               {...projectEnquiryLinkProps}
-              onClick={closeMenu}
               className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               Start a Project

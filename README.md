@@ -8,16 +8,18 @@ update this single field and rebuild the site. Use a plain email address without
 a `mailto:` prefix or query parameters. This address is public in the site's links.
 
 All four “Start a Project” CTAs (hero, contact section, desktop navigation, and
-mobile menu) use this shared configuration. Their native
-`mailto:` links open the visitor's email application with the subject
-“Project Enquiry — ASCE Studio” and a short project brief template. The mobile
-menu also closes on activation. The Contact section at the end of `/work/vanta`
-uses the same enquiry link. Links open in the visitor's email application without
-requesting a new browser tab and support keyboard activation with visible focus.
+mobile menu) use this shared configuration. Their native anchors open Gmail
+compose in a new tab with the subject “Project Enquiry — ASCE Studio” and a short
+project brief template. The Contact section at the end of `/work/vanta` uses the
+same enquiry link. `generatedGmailComposeUrl` encodes the `to`, `su`, and `body`
+parameters; all direct enquiry links use `target="_blank"` and
+`rel="noopener noreferrer"`, with no JavaScript navigation handlers. Keyboard
+activation and visible focus are supported. Gmail may require the visitor to
+sign in before displaying the draft.
 
-To verify after changing configuration, activate each CTA on desktop and mobile
-with an email application configured, and check the recipient, subject, and body
-in the draft.
+To verify after changing configuration, activate each CTA on desktop and mobile,
+confirm a new tab opens, and check the recipient, subject, and body in the Gmail
+compose URL and draft. Ctrl+click and opening the link in a new tab work natively.
 
 ## Local development
 
