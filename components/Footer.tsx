@@ -1,11 +1,13 @@
+import Link from "next/link";
+
 const footerLinks = [
   {
     title: "Explore",
     links: [
-      { label: "Work", href: "#work" },
-      { label: "Services", href: "#services" },
-      { label: "Process", href: "#process" },
-      { label: "Studio", href: "#about" },
+      { label: "Work", href: "/#work" },
+      { label: "Services", href: "/#services" },
+      { label: "Process", href: "/#process" },
+      { label: "Studio", href: "/#about" },
     ],
   },
   {
@@ -27,12 +29,12 @@ export default function Footer() {
 
           {/* BRAND */}
           <div>
-            <a
-              href="#"
+            <Link
+              href="/"
               className="text-xl font-semibold tracking-[0.2em]"
             >
               ASCE
-            </a>
+            </Link>
 
             <p className="mt-5 max-w-sm text-sm leading-6 text-zinc-500">
               A multidisciplinary digital studio working across design,
@@ -50,13 +52,13 @@ export default function Footer() {
 
                 <div className="mt-5 flex flex-col items-start gap-3">
                   {group.links.map((link) => link.href ? (
-                    <a
+                    <Link
                       key={link.label}
                       href={link.href}
                       className="text-sm text-zinc-400 transition-colors hover:text-white"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   ) : (
                     <span key={link.label} className="text-sm text-zinc-400">
                       {link.label}

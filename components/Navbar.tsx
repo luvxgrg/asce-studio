@@ -1,12 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const navLinks = [
-  { label: "Work", href: "#work" },
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "Studio", href: "#about" },
+  { label: "Work", href: "/#work" },
+  { label: "Services", href: "/#services" },
+  { label: "Process", href: "/#process" },
+  { label: "Studio", href: "/#about" },
 ];
 
 export default function Navbar() {
@@ -87,36 +88,36 @@ export default function Navbar() {
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
 
           {/* LOGO */}
-          <a
+          <Link
             ref={logoRef}
-            href="#"
+            href="/"
             className="relative z-50 text-lg font-semibold tracking-[0.2em] text-white"
             onClick={closeMenu}
           >
             ASCE
-          </a>
+          </Link>
 
           {/* DESKTOP NAVIGATION */}
           <div className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="text-sm text-zinc-400 transition-colors hover:text-white"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* DESKTOP CTA */}
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             className="hidden rounded-full border border-white/20 px-5 py-2.5 text-sm font-medium text-white transition-all hover:border-white/40 hover:bg-white hover:text-black md:inline-flex"
           >
             Start a Project
             <span className="ml-2">→</span>
-          </a>
+          </Link>
 
           {/* MOBILE MENU BUTTON */}
           <button
@@ -157,7 +158,7 @@ export default function Navbar() {
           {/* LINKS */}
           <div className="flex flex-1 flex-col justify-start">
             {navLinks.map((link, index) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 onClick={closeMenu}
@@ -174,7 +175,7 @@ export default function Navbar() {
                 <span className="ml-auto text-zinc-400 transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
-              </a>
+              </Link>
             ))}
 
             <div className="border-t border-white/10" />
@@ -186,14 +187,14 @@ export default function Navbar() {
               Have a project, idea or business you want to move forward?
             </p>
 
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               onClick={closeMenu}
               className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black"
             >
               Start a Project
               <span className="ml-2">→</span>
-            </a>
+            </Link>
           </div>
 
         </div>
