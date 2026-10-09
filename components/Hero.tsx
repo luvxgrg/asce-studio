@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { projectEnquiryLinkProps } from "@/config/contact";
 
 export default function Hero() {
   return (
@@ -58,8 +59,8 @@ export default function Hero() {
           {/* BUTTONS */}
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="#contact"
-              className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition duration-300 hover:scale-[1.03] hover:bg-zinc-200"
+              {...projectEnquiryLinkProps}
+              className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition duration-300 hover:scale-[1.03] hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               Start a Project
               <span className="ml-2">→</span>

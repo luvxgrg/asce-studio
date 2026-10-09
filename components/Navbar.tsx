@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { projectEnquiryLinkProps } from "@/config/contact";
 
 const navLinks = [
   { label: "Work", href: "/#work" },
@@ -111,13 +112,13 @@ export default function Navbar() {
           </div>
 
           {/* DESKTOP CTA */}
-          <Link
-            href="/#contact"
-            className="hidden rounded-full border border-white/20 px-5 py-2.5 text-sm font-medium text-white transition-all hover:border-white/40 hover:bg-white hover:text-black md:inline-flex"
+          <a
+            {...projectEnquiryLinkProps}
+            className="hidden rounded-full border border-white/20 px-5 py-2.5 text-sm font-medium text-white transition-all hover:border-white/40 hover:bg-white hover:text-black md:inline-flex focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
           >
             Start a Project
             <span className="ml-2">→</span>
-          </Link>
+          </a>
 
           {/* MOBILE MENU BUTTON */}
           <button
@@ -187,14 +188,14 @@ export default function Navbar() {
               Have a project, idea or business you want to move forward?
             </p>
 
-            <Link
-              href="/#contact"
+            <a
+              {...projectEnquiryLinkProps}
               onClick={closeMenu}
-              className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black"
+              className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-medium text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               Start a Project
               <span className="ml-2">→</span>
-            </Link>
+            </a>
           </div>
 
         </div>

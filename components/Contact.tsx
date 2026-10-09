@@ -1,3 +1,5 @@
+import { projectEnquiryLinkProps } from "@/config/contact";
+
 export default function Contact() {
   return (
     <section
@@ -37,8 +39,8 @@ export default function Contact() {
 
           <div className="flex lg:justify-end">
             <a
-              href="mailto:hello@ascestudio.com"
-              className="group inline-flex items-center gap-5 rounded-full bg-white px-7 py-4 text-sm font-medium text-black transition duration-300 hover:scale-[1.03] hover:bg-zinc-200"
+              {...projectEnquiryLinkProps}
+              className="group inline-flex items-center gap-5 rounded-full bg-white px-7 py-4 text-sm font-medium text-black transition duration-300 hover:scale-[1.03] hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               Start a Project
 

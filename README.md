@@ -1,6 +1,25 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Contact configuration
+
+`contactEmail` in `config/contact.ts` contains the temporary official ASCE Studio
+email supplied by the project owner. When a custom-domain mailbox is introduced,
+update this single field and rebuild the site. Use a plain email address without
+a `mailto:` prefix or query parameters. This address is public in the site's links.
+
+All four “Start a Project” CTAs (hero, contact section, desktop navigation, and
+mobile menu) use this shared configuration. Their native
+`mailto:` links open the visitor's email application with the subject
+“Project Enquiry — ASCE Studio” and a short project brief template. The mobile
+menu also closes on activation. The Contact section at the end of `/work/vanta`
+uses the same enquiry link. Links open in the visitor's email application without
+requesting a new browser tab and support keyboard activation with visible focus.
+
+To verify after changing configuration, activate each CTA on desktop and mobile
+with an email application configured, and check the recipient, subject, and body
+in the draft.
+
+## Local development
 
 First, run the development server:
 
